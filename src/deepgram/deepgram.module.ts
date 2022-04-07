@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { DeepgramService } from './deepgram.service';
 
-@Module({
+@Module({ 
   providers: [DeepgramService, ConfigService],
   exports: [DeepgramService],
 })
