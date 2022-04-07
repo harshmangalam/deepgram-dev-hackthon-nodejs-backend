@@ -12,8 +12,8 @@ export class TranscribeController {
   constructor(private transcribeService: TranscribeService) {}
   @Post('pre-recorded-file')
   @UseInterceptors(FileInterceptor('file'))
-  async transcribePreRecordedFile(@UploadedFile() file: Express.Multer.File) {
-    const response = await this.transcribeService.transcribe(file);
+  async transcribeFile(@UploadedFile() file: Express.Multer.File) {
+    const response = await this.transcribeService.transcribeFile(file);
     return response;
   }
 }
